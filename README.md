@@ -10,7 +10,9 @@ A student that completes this project shows that they can:
 
 ## Introduction
 
-This is a basic database scheme with customers, orders, and sales agents. This Java Spring REST API application will provide the data modeling to support the application. This is part 1 of a 3 part application series.
+This is a basic database scheme with customers, orders, and sales agents. This Java Spring REST API
+application will provide the data modeling to support the application. This is part 1 of a 3 part 
+application series.
 
 ### Database layout
 
