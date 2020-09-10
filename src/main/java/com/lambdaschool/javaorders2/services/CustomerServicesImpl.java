@@ -1,7 +1,7 @@
 package com.lambdaschool.javaorders2.services;
 
 import com.lambdaschool.javaorders2.models.Customer;
-import com.lambdaschool.javaorders2.repos.CustomerRepos;
+import com.lambdaschool.javaorders2.repos.CustomersRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 public class CustomerServicesImpl implements CustomerServices {
 
     @Autowired
-    CustomerRepos custrepo;
+    CustomersRepo custrepo;
     @Override
     public Customer save(Customer customer) { return custrepo.save(customer);}
 

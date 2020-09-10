@@ -3,6 +3,7 @@ package com.lambdaschool.javaorders2.models;
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
+
     @Entity
     @Table(name = "customers")
     public class Customer
@@ -21,6 +22,7 @@ import java.util.List;
         private double paymentamt;
         private double outstandingamt;
         private String phone;
+
         @ManyToOne
         @JoinColumn(name = "agentcode", nullable = false)
         private Agent agent;
@@ -145,6 +147,5 @@ import java.util.List;
         {
             this.phone = phone;
         }
-    }
 
 }

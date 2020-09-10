@@ -1,23 +1,18 @@
-package com.lambdaschool.crudyorders;
+package com.lambdaschool.javaorders2;
 
-import com.github.javafaker.Faker;
-import com.lambdaschool.crudyorders.models.Agent;
-import com.lambdaschool.crudyorders.models.Customer;
-import com.lambdaschool.crudyorders.models.Order;
-import com.lambdaschool.crudyorders.models.Payment;
-import com.lambdaschool.crudyorders.repositories.AgentsRepository;
-import com.lambdaschool.crudyorders.repositories.CustomersRepository;
-import com.lambdaschool.crudyorders.repositories.OrdersRepository;
-import com.lambdaschool.crudyorders.repositories.PaymentRepository;
+//import com.github.javafaker.Faker;
+import com.lambdaschool.javaorders2.models.Agent;
+import com.lambdaschool.javaorders2.models.Customer;
+import com.lambdaschool.javaorders2.models.Order;
+import com.lambdaschool.javaorders2.models.Payment;
+import com.lambdaschool.javaorders2.repos.AgentsRepo;
+import com.lambdaschool.javaorders2.repos.CustomersRepo;
+import com.lambdaschool.javaorders2.repos.OrdersRepo;
+import com.lambdaschool.javaorders2.repos.PaymentsRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
-
-import java.util.HashSet;
-import java.util.Locale;
-import java.util.Random;
-import java.util.Set;
 
 
 @Transactional
@@ -27,25 +22,25 @@ public class SeedData implements CommandLineRunner {
      * Connects the customer table to this SeedData method
      */
     @Autowired
-    private CustomersRepository custrepos;
+    private CustomersRepo custrepos;
 
     /**
      * Connects the agents table to this SeedData method
      */
     @Autowired
-    private AgentsRepository agentrepos;
+    private AgentsRepo agentrepos;
 
     /**
      * Connects the orders table to this SeedData method
      */
     @Autowired
-    private OrdersRepository ordersrepos;
+    private OrdersRepo ordersrepos;
 
     /**
      * Connects the payment table to this SeedData method
      */
     @Autowired
-    private PaymentRepository paymentrepos;
+    private PaymentsRepo paymentsrepo;
 
     /**
      * Generates test, seed data for our application
@@ -64,10 +59,10 @@ public class SeedData implements CommandLineRunner {
         Payment pay3 = new Payment("Credit Card");
         Payment pay4 = new Payment("Mobile Pay");
 
-        pay1 = paymentrepos.save(pay1);
-        pay2 = paymentrepos.save(pay2);
-        pay3 = paymentrepos.save(pay3);
-        pay4 = paymentrepos.save(pay4);
+        pay1 = paymentsrepo.save(pay1);
+        pay2 = paymentsrepo.save(pay2);
+        pay3 = paymentsrepo.save(pay3);
+        pay4 = paymentsrepo.save(pay4);
 
         Agent a01 = new Agent("Ramasundar",
                 "Bangalore",
